@@ -1,0 +1,41 @@
+{
+  "name": "Fulcrum Jersi",
+  "version": "0.0.0",
+  "homepage": "https://bitbucket.org/FulCrum-GT",
+  "authors": [
+    "FulCrum-GT"
+  ],
+  "main": "app.js",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.14",
+    "angular-aside": "~1.1.3",
+    "angular-bootstrap": "~0.13.3",
+    "angular-cookies": "~1.3.15",
+    "angular-resource": "~1.3.14",
+    "angular-route": "~1.3.14",
+    "angular-sanitize": "~1.3.14",
+    "angular-touch": "~1.3.15",
+    "lodash": "~3.3.1",
+    "bootstrap": "~3.3.5",
+    "angular-material": "~1.0.1",
+	  "angular-ui-grid": "~3.1.0",
+	  "angular-spinner": "~0.6.1",
+	  "js-xlsx":""
+  },
+  "resolutions": {
+    "angular": "~1.3.14",
+    "angular-bootstrap": "~0.13.3"
+  }
+}

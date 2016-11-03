@@ -1,0 +1,230 @@
+﻿<style>
+    /*    .md-chips {
+            height: 34px;
+            font-size: 14px;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+        }*/
+
+    /*    .md-datepicker {
+            height: 34px;
+            font-size: 14px;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+        }*/
+
+    /*    .md-chips .md-chip .md-chip-remove {
+            height: 24px;
+        }*/
+
+    /*    .md-chips .md-chip {
+            height: 24px;
+            line-height: 24px;
+        }*/
+    .form-control {
+        border-radius: 0px!important;
+    }
+
+    .md-chips {
+        height: 32px;
+        font-size: 14px;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 0px;
+    }
+
+        .md-chips .md-chip .md-chip-remove {
+            height: 24px;
+        }
+
+        .md-chips .md-chip {
+            height: 24px;
+            line-height: 24px;
+        }
+
+        .md-chips .md-chip-input-container {
+            margin: 0px;
+            width: 100%;
+            height: 27px!important;
+        }
+
+        .md-chips.md-default-theme .md-chips, md-chips .md-chips {
+            min-height: 27px;
+            height: 100%;
+            padding-bottom: 0px;
+        }
+
+    md-chips.md-default-theme .md-chip, md-chips .md-chip {
+        background-color: white;
+        border-radius: 0px !important;
+        border: 1px solid #DDE2E8;
+        margin-top: 3px !important;
+    }
+
+    .md-chips .md-chip .md-chip-remove md-icon {
+        height: auto;
+        width: 14px;
+        border-radius: 50px;
+        border: 1px solid #5987D3;
+    }
+
+    md-icon {
+        fill: #5987D3;
+    }
+
+    .form-label {
+        line-height: 29px;
+    }
+
+
+    md-datepicker.ng-invalid {
+        background-color: pink;
+    }
+
+    .md-button.md-icon-button {
+        width: 20px;
+    }
+    /*md-datepicker.ng-valid {
+        background-color: lightgreen;
+    }*/
+</style>
+
+<div class="modal-content" style="box-shadow: 0px 0px 0px 0px; border: 0px; background-color: #F5F6F8;">
+
+    <div class="wp_modal_header modal-header">
+        <!-- <nav class="nav navbar-default"> -->
+        <button type="button" class="close" ng-click="cancel()"><span>&times;</span></button>
+        <h3 class="modal-title font_cl09">Invoice Filter</h3>
+        <!-- </nav> -->
+    </div>
+    <div class="modal-body">
+
+        <form name="myForm" novalidate>
+            <div class="row wp_modal_cl01">
+                <h4 class="col-md-12 wp_modal_cl03 font_cl10">Submitted Date Selection</h4>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-md-4 wp_modal_cl18">
+                            <label class="form-label font_cl11">From</label>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="input-group wp_form_datpicker">
+                                <md-datepicker ng-model="wrkdate" required name="workfromdate"></md-datepicker>
+                                <!--    <input class="form-control form-input wp_modal_cl12" type="text">-->
+                                <!--                                            <span class="input-group-addon wp_modal_img" id="basic-addon2"><img width="23" height="21" title="" alt="" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAVABcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1bW9a1OHV3s7KzmmijjR2aFCzBi2efYhSPxrKXXfFkhdJdMuER1ZdyWzBlJBAP4HB/Cups/8AkZdV/wCuNv8A+z1q11e1jBKPInt+RhySlrzGL4e1S71Jbtby3aF4ZNqq67W2kZGR60VLpv8AyGNX/wCukf8A6BRWNW3Norf8MaQvy6li50u3uZzOzTxyFQrNDM0e4DOM7SM4yfzqL+xbf/n5v/8AwMk/+KooqVOS6j5V2LNpZQ2SuIg5LnczO5dmPuTzRRRSbbd2NKx//9k="/></span>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="/*padding-left: 9px; */padding-right: 26px;">
+                    <div class="form-group row">
+                        <div class="col-md-4 wp_modal_cl10">
+                            <label class="form-label font_cl11">To</label>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="input-group wp_form_datpicker">
+                                <md-datepicker ng-model="wrkdateto" required name="worktodate"></md-datepicker>
+                                <!--    <input class="form-control form-input wp_modal_cl12" type="text">-->
+                                <!--                                            <span class="input-group-addon wp_modal_img" id="basic-addon2"><img width="23" height="21" title="" alt="" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAVABcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1bW9a1OHV3s7KzmmijjR2aFCzBi2efYhSPxrKXXfFkhdJdMuER1ZdyWzBlJBAP4HB/Cups/8AkZdV/wCuNv8A+z1q11e1jBKPInt+RhySlrzGL4e1S71Jbtby3aF4ZNqq67W2kZGR60VLpv8AyGNX/wCukf8A6BRWNW3Norf8MaQvy6li50u3uZzOzTxyFQrNDM0e4DOM7SM4yfzqL+xbf/n5v/8AwMk/+KooqVOS6j5V2LNpZQ2SuIg5LnczO5dmPuTzRRRSbbd2NKx//9k="/></span>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row wp_modal_cl01">
+                <h4 class="col-md-12 wp_modal_cl03 font_cl10">Invoice selection</h4>
+                <div class="col-md-12">
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <label class="form-label font_cl11">Invoice Number</label>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="input-group">
+
+                                <md-chips ng-model="invoicenumberfilter" ng-paste="invoicenumberfilteronpaste($event)">
+    
+        </md-chips>
+
+                                <span class="input-group-addon wp_modal_img" id="Span2">
+                                    <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAIAAADCaIt+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALOSURBVEhL7VZLblMxFLWdVzFiwEcgJiyAJaTqImhh1M2AGgawkKSDrAJVrKBUMKBKKFJRxhRBiX0551ynSZoEJMSbIE4T59q+f7933GhmoU2k+tsaUmi3AASIVWoJ3qKCryqZcqBUMM5rw75lF7loQROs0tA158rL4CFbKFG9MlRTQqSISE2EUSxmEeuolIoxUyQWeksdi7FTp8uQGR1BRjowLhaS2qbsCHqUC+hJ1hxTDvzJ9F6dXIcMovtSEQbv6o8lRMIiDN27ptREoDqNdIkY1Pe2rYBpMLbia2BPXhyOTs4uWAlmSiKFyxhulJCxC5cJdiXtbd/b276DXa5tqIDZZZsWDOykFcDsef/Du9EFd7jEDwfuaApkG745H74+l06WipRX4Nmhg3xeM087xvIjhyYnTNkTNBDlK0F8mSzMsGPW0bkmGnGTrlbBFlURnU8l8oGy3uBst3v70cObiPpscPr+09etaedbZ9qw+YiBDtEtPg2tUizl8c6tJ90H1dUiVMcSUO9Bf/T2I1pEQD4ef3F5E4ZHk+HR5zpZxvq6BD4ws+r+HL8I8HfwP8Bv8Y8EKGBn8V19KsEJsTcY7b882X91PJ58b8jjeGNyVRD/UsQ7znVf3ZArXwbSy6WTiWiFg8iF7HPQP8WLdkVWTj6UNYifsl60iW9fwyxs2fIU8Nbrxsl+ySDzKbiABMIaQRBQAUexpFQwEWHTPpp6sALRtS4OTFBq1afkTUu9wzGoW1cA1bGGwBl/Eslc5HR7unN/t3uXJstwskMuILqOt7Hel4oiDYalAheQvvTqnpZJt6C/HNbdmgrAuqFqJSYWX6sArqquHhc2eb6kaMVGEtyZG87BnEH9haroPZU8OaKg/Ow3Go3dfnY36oyYAWzY4XXeAa8ATlh+rVuj0vdHQAL6zP8FeNo8MrplKn7FMoRUV7Fw4bSD2XG1hBB+Ars3VtX/aRiPAAAAAElFTkSuQmCC"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="row wp_modal_cl16">
+                <h4 class="col-md-12 wp_modal_cl03 font_cl10">Matter Selection</h4>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label class="form-label font_cl11">Matter</label>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <md-chips ng-model="matterfilter" ng-paste="matterfilteronpaste($event)"></md-chips>
+                                <span class="input-group-addon wp_modal_img" id="Span5">
+                                    <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAIAAADCaIt+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALOSURBVEhL7VZLblMxFLWdVzFiwEcgJiyAJaTqImhh1M2AGgawkKSDrAJVrKBUMKBKKFJRxhRBiX0551ynSZoEJMSbIE4T59q+f7933GhmoU2k+tsaUmi3AASIVWoJ3qKCryqZcqBUMM5rw75lF7loQROs0tA158rL4CFbKFG9MlRTQqSISE2EUSxmEeuolIoxUyQWeksdi7FTp8uQGR1BRjowLhaS2qbsCHqUC+hJ1hxTDvzJ9F6dXIcMovtSEQbv6o8lRMIiDN27ptREoDqNdIkY1Pe2rYBpMLbia2BPXhyOTs4uWAlmSiKFyxhulJCxC5cJdiXtbd/b276DXa5tqIDZZZsWDOykFcDsef/Du9EFd7jEDwfuaApkG745H74+l06WipRX4Nmhg3xeM087xvIjhyYnTNkTNBDlK0F8mSzMsGPW0bkmGnGTrlbBFlURnU8l8oGy3uBst3v70cObiPpscPr+09etaedbZ9qw+YiBDtEtPg2tUizl8c6tJ90H1dUiVMcSUO9Bf/T2I1pEQD4ef3F5E4ZHk+HR5zpZxvq6BD4ws+r+HL8I8HfwP8Bv8Y8EKGBn8V19KsEJsTcY7b882X91PJ58b8jjeGNyVRD/UsQ7znVf3ZArXwbSy6WTiWiFg8iF7HPQP8WLdkVWTj6UNYifsl60iW9fwyxs2fIU8Nbrxsl+ySDzKbiABMIaQRBQAUexpFQwEWHTPpp6sALRtS4OTFBq1afkTUu9wzGoW1cA1bGGwBl/Eslc5HR7unN/t3uXJstwskMuILqOt7Hel4oiDYalAheQvvTqnpZJt6C/HNbdmgrAuqFqJSYWX6sArqquHhc2eb6kaMVGEtyZG87BnEH9haroPZU8OaKg/Ow3Go3dfnY36oyYAWzY4XXeAa8ATlh+rVuj0vdHQAL6zP8FeNo8MrplKn7FMoRUV7Fw4bSD2XG1hBB+Ars3VtX/aRiPAAAAAElFTkSuQmCC"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row wp_modal_cl13">
+                <h4 class="col-md-12 wp_modal_cl03 font_cl10">Vendor Selection</h4>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label class="form-label font_cl11">Vendor Number</label>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <md-chips ng-model="vendornumberfilter" ng-paste="vendornumberfilteronpaste($event)"></md-chips>
+                                <span class="input-group-addon wp_modal_img" id="Span7">
+                                    <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAIAAADCaIt+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALOSURBVEhL7VZLblMxFLWdVzFiwEcgJiyAJaTqImhh1M2AGgawkKSDrAJVrKBUMKBKKFJRxhRBiX0551ynSZoEJMSbIE4T59q+f7933GhmoU2k+tsaUmi3AASIVWoJ3qKCryqZcqBUMM5rw75lF7loQROs0tA158rL4CFbKFG9MlRTQqSISE2EUSxmEeuolIoxUyQWeksdi7FTp8uQGR1BRjowLhaS2qbsCHqUC+hJ1hxTDvzJ9F6dXIcMovtSEQbv6o8lRMIiDN27ptREoDqNdIkY1Pe2rYBpMLbia2BPXhyOTs4uWAlmSiKFyxhulJCxC5cJdiXtbd/b276DXa5tqIDZZZsWDOykFcDsef/Du9EFd7jEDwfuaApkG745H74+l06WipRX4Nmhg3xeM087xvIjhyYnTNkTNBDlK0F8mSzMsGPW0bkmGnGTrlbBFlURnU8l8oGy3uBst3v70cObiPpscPr+09etaedbZ9qw+YiBDtEtPg2tUizl8c6tJ90H1dUiVMcSUO9Bf/T2I1pEQD4ef3F5E4ZHk+HR5zpZxvq6BD4ws+r+HL8I8HfwP8Bv8Y8EKGBn8V19KsEJsTcY7b882X91PJ58b8jjeGNyVRD/UsQ7znVf3ZArXwbSy6WTiWiFg8iF7HPQP8WLdkVWTj6UNYifsl60iW9fwyxs2fIU8Nbrxsl+ySDzKbiABMIaQRBQAUexpFQwEWHTPpp6sALRtS4OTFBq1afkTUu9wzGoW1cA1bGGwBl/Eslc5HR7unN/t3uXJstwskMuILqOt7Hel4oiDYalAheQvvTqnpZJt6C/HNbdmgrAuqFqJSYWX6sArqquHhc2eb6kaMVGEtyZG87BnEH9haroPZU8OaKg/Ow3Go3dfnY36oyYAWzY4XXeAa8ATlh+rVuj0vdHQAL6zP8FeNo8MrplKn7FMoRUV7Fw4bSD2XG1hBB+Ars3VtX/aRiPAAAAAElFTkSuQmCC"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+
+    </div>
+    <div class="wp_modal_footer modal-footer">
+        <span style="color: red" ng-show="myForm.workfromdate.$invalid ||myForm.worktodate.$invalid">Dates are Required
+        </span>
+
+
+
+        <button type="button" class="btn btn-warning font_cl12 wp_modal_cl09" ng-click="APIfilterItem()"
+            ng-disabled="((myForm.workfromdate.$invalid || myForm.worktodate.$invalid))||!((invoicenumberfilter.length!=0|| matterfilter.length!=0|| vendornumberfilter.length!=0))">
+            Go</button>
+        <span type="" class="font_cl12 wp_modal_cl09" ng-click="cancel()">Cancel</span>
+    </div>
+</div>
+
+
+
+
+

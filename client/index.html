@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="assets/css/MS-styles.css">
+    <link href="angmaterial/angular-material.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="angmaterial/ui-grid.min.css" rel="stylesheet" />
+	
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="assets/css/_all-skins.min.css">
+
+    <style>
+         a {
+            cursor:pointer;
+        }
+        md-backdrop.md-select-backdrop {
+            z-index: 103;
+        }
+
+        .md-select-menu-container {
+            z-index: 9999;
+        }
+
+        /*.md-datepicker-input-container {
+            z-index: 9999;
+        }*/
+        .md-datepicker-calendar-pane {
+            z-index: 9999;
+        }
+
+        .md-virtual-repeat-container.md-autocomplete-suggestions-container {
+            z-index: 9999;
+        }
+
+        md-tooltip {
+            z-index: 9999;
+        }
+        /*please add this in css for arrow issue*/
+        .md-chips .md-chip .md-chip-remove md-icon { /*x mark issue in IE*/
+            height: 16px !important;
+        }
+
+        /*issues for data in table*/
+
+        .wp_table thead { /*font alignment*/
+            text-align: left !important;
+        }
+
+        .font_cl06 { /*font in table*/
+            text-align: left!important;
+        }
+
+        .font_cl08 { /*font in table*/
+            text-align: left !important;
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="lglsystem" ontouchstart="" ng-view class="{{cls}}">   
+
+
+	<script src="angmaterial/Chart.js"></script>
+    <script src="assets/scripts/vendor.min.js"></script>
+    <script src="angmaterial/angular-material.js"></script>
+    <script src="assets/scripts/lglsystem.min.js"></script>
+    <script src="angmaterial/resizeGrid.js"></script>
+    <script src="angmaterial/header.js"></script>
+    <script src="angmaterial/angular-loading-spinner.js"></script> 
+	<script src="angmaterial/angular-chart.min.js"></script>
+</body>
+</html>
+
+
+
+

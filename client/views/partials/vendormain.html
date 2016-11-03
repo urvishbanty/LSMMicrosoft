@@ -1,0 +1,291 @@
+<style>
+    .tClass {
+        display: table;
+        border-collapse: collapse;
+        min-width: 900px;
+        background: white;
+    }
+
+    .theadClass {
+        display: table-header-group;
+        font-weight: bold;
+        background: #909EB8;
+        height: 40px;
+    }
+
+    .tdClass {
+        display: block;
+        padding: 8px;
+        float: left;
+        width: 11%;
+        word-wrap: break-word;
+    }
+
+    .thClass {
+        display: block;
+        padding: 8px;
+        float: left;
+        width: 11%;
+        word-wrap: break-word;
+    }
+
+    .tbodyClass {
+        /*display: table-row-group;*/
+        display: block;
+        height: 600px;
+        overflow-y: scroll;
+    }
+
+    .trClass {
+        display: table-row;
+    }
+    /*    .trClass span{
+            padding-left: 8px;
+        }*/
+    .topBorder {
+        border: 1px solid #D9DEE7;
+    }
+
+    .p {
+        padding: 8px;
+    }
+
+    .newRow {
+        background: #F5F6F8;
+        color: #43434D;
+        display: block;
+        float: left;
+        word-wrap: break-word;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .theadClass .thClass {
+        width: 10.86%;
+    }
+
+    .btn-footer {
+        background-color: #f47421;
+        border-color: #f47421;
+        border-radius: 3px !important;
+        width: auto;
+        /*height: 34px;*/
+        height: 25px;
+        text-align: center !important;
+        padding: 0px 20px;
+    }
+
+        .btn-footer:hover {
+            background-color: #F77F31 !important;
+            border-color: #F77F31 !important;
+            color: #FFFFFF;
+        }
+
+    .footeralignment {
+        padding-top: 8px;
+    }
+
+    .wp_select_cl01 select {
+        /*background: #ffffff!important;*/
+        border: 1px solid #E3E7EC;
+        min-width: 130px;
+        height: 27px;
+        /*margin: 10px 20px !important;*/
+        margin: 0px 0px 30px 0px !important;
+        background-color: #ffffff!important;
+        background: url("assets/images/dropdown_arrow.jpg") no-repeat center right;
+        -webkit-appearance: none; /*removes borders and downarrow button of the select box from webkit browsers.*/
+        -moz-appearance: none; /*cannot remove the downarrow button of the mozilla browsers.*/
+        appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+    }
+
+        .wp_select_cl01 select:focus {
+            outline: none;
+        }
+
+    .form-control {
+        border-radius: 0px!important;
+    }
+
+    .gridHead {
+        background: #909EB8;
+        color: white;
+        /*                word-wrap: break-word;
+                                font-family: arial;
+                                font-size: 14px;
+                                font-weight: lighter;
+                                padding: 3px;*/
+    }
+
+    .gridCell {
+        font-family: arial;
+        font-size: 13px;
+        font-weight: lighter;
+        padding: 3px;
+        word-wrap: break-word;
+    }
+
+    .gridCellBack {
+        background-color: white !important;
+    }
+
+    .ui-grid-cell-contents {
+        white-space: normal;
+    }
+
+    .ui-grid-cell-contents {
+        overflow: visible;
+    }
+
+    .ui-grid-cell {
+        overflow: visible;
+        border: none;
+        /*height: auto !important;*/
+    }
+
+    .ui-grid-header-cell {
+        border-right: none;
+        height: auto !important;
+    }
+
+    .mergedRow {
+        background-color: white !important;
+        color: #43434D;
+        border-bottom: 1px solid #D9DEE7;
+        padding: 8px;
+    }
+
+    .innerMerge {
+        background: #F5F6F8 !important;
+        border: 1px solid #D9DEE7;
+        padding: 5px;
+    }
+
+    .ui-grid-column-menu-button {
+        display: none;
+    }
+
+    .ui-grid-top-panel {
+        background: #909EB8;
+    }
+
+    md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+        background-color: rgb(242, 158, 0);
+    }
+
+    md-checkbox.md-checked .md-ink-ripple {
+        color: rgb(242, 158, 0);
+    }
+
+    md-toast {
+        z-index: 9999;
+    }
+
+    textarea {
+        resize: vertical; /* user can resize vertically, but width is fixed */
+    }
+
+    .ngViewport.ng-scope {
+        height: auto !important;
+        overflow-y: hidden;
+    }
+
+    .ngTopPanel.ng-scope, .ngHeaderContainer {
+        width: auto !important;
+    }
+
+    .matter-grid {
+        width: 100%;
+    }
+
+    .selectred {
+        border: 1px solid red;
+    }
+
+    .ui-grid-icon-up-dir {
+        /*content: '\c359';*/
+        background: url("../ZPRS_MAT_CTR/assets//images/wp_img_menu_up.png")no-repeat;
+    }
+
+    .ui-grid-icon-down-dir {
+        /*content: '\c358';*/
+        background: url("../ZPRS_MAT_CTR/assets//images/wp_img_menu_down.png")no-repeat;
+    }
+
+    .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+        background: rgb(242, 158, 0)!important;
+    }
+
+    .gridStyle {
+        border: 1px solid rgb(212,212,212);
+        width: 400px;
+        height: 400px;
+    }
+
+    .ngRow.odd {
+        background-color: transparent;
+    }
+
+    .ngRow.even {
+        background-color: transparent;
+    }
+
+    .ngGrid {
+        background-color: transparent;
+    }
+    /* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+    .fileinput-button {
+        position: relative;
+        overflow: hidden;
+    }
+        /*Also*/
+        .fileinput-button input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+            font-size: 200px;
+            direction: ltr;
+            cursor: pointer;
+        }
+
+    .grid {
+        height: 350px;
+    }
+
+    .grid2 {
+        height: 250px;
+    }
+
+    .tabcontent {
+        background-color: white;
+    }
+
+    .matterselectedstyle {
+        background-color: #0078d7 !important;
+    }
+
+        .matterselectedstyle .font_cl03, .matterselectedstyle .font_cl05 {
+            color: #fff !important;
+        }
+
+    .ui-grid-filter-input {
+        color: black;
+    }
+
+    .popover {
+        margin-left: -313px;
+        max-width: 400px;
+        min-width: 200px;
+        max-height: 500px;
+        overflow: auto;
+        z-index: 9999;
+    }
+    .ui-grid-top-panel {
+    background: #fff;
+}
+</style>  <span us-spinner="{lines: 6 , length: 10 , width: 6 , radius: 10 , scale: 0.75 , corners: 1 , color: '#000' , opacity: 0.25 , rotate: 0 , direction: 1 , speed: 1 , trail: 60 , fps: 20 , zIndex: 2e9 , className: 'spinner' , top: '50%' , left: '50%' , shadow: false , position: 'absolute'}"></span> <div ng-header></div> <script type=text/ng-template id=gridfilter.html> <span class="cross_delete pull-right" ng-click="popoverclose()" style="margin-top: -34px;"></span> <div ng-repeat="Filterslist in gridData.columnDefs track by $index" ng-if="Filterslist.HaveData && Filterslist.name!=''" > <div class="row" > <div ng-click="showhide(Filterslist.field,Filterslist.name)" > <i class="indicator wp_menu_down pull-left" ng-if="Filterslist.showhide"></i><i ng-if="!Filterslist.showhide" class="indicator wp_menu_right pull-left"></i> <h4 class="wp_modal_cl03 font_cl10"><span ng-if="Filterslist.displayName">{{Filterslist.displayName}}</span><span ng-if="!Filterslist.displayName">{{Filterslist.name}}<span></h4> </div> <div class="col-md-6 col-xs-12" ng-if="Filterslist.showhide " ng-repeat="Filterele in Filterslist.FiltercolumnDef"> <input type="checkbox" ng-model="Filterele.IsSelect" ng-click="chekboxevent(Filterele.FilterValue,Filterele.filterId,Filterele)" > <label class="form-label font_cl11" ng-if="Filterele.filterId!='Datab'&&Filterele.filterId!='Datbi'">{{Filterele.FilterValue}}</label> <!--<label class="form-label font_cl11" ng-if="(Filterele.filterId=='Posnr' || Filterele.filterId=='Pernr') && Filterele.FilterValue*1!=0">{{Filterele.FilterValue*1}}</label> --> <label class="form-label font_cl11" ng-if="Filterele.filterId=='Datab'||Filterele.filterId=='Datbi'">{{Filterele.FilterValue | dateFilter | date:'MM/dd/yyyy'}}</label> </div> </div> </div> </div> </script> <div class=content-wrapper style="min-height: 244px;"> <section class="content content-container" style="margin: 20px 30px 30px 30px;"> <div class=row> <h1>Manage Time Keeper Rates</h1> <div class="pull-right wp_page_cl08" style="margin-bottom: 10px;"> <i class="fa fa-cog settingsCls" aria-hidden=true ng-click="showFormModal('settings')"></i> <i class="fa fa-filter settingsCls" data-toggle=popover popover-template=dynamicPopover.templateUrl popover-title={{dynamicPopover.title}} popover-placement=bottom-left></i> </div> </div> <div class=row> <div class=col-xs-12 ng-if=setVal> <div ng-repeat="fil in filterCheckedArray"> <div class=filter_item ng-repeat="filname in fil.checkedarray"> <span ng-if="fil.fieldname!='Datab' && fil.fieldname!='Datbi'">{{filname}} </span>  <span ng-if="fil.fieldname=='Datab'||fil.fieldname=='Datbi'">{{filname | dateFilter | date:'MM/dd/yyyy'}} </span>  <span class="icon-button fa fa-times theme-color-tertiary" ng-click=filterRemoveItem(filname,fil.fieldname)></span> </div> </div> </div> </div>  <div class=row> <div id=wrapper ng-class="{'toggled': issideActive}" class=tab-container> <div id=sidebar-wrapper> <div class="wp_page_form form-group wp_sidebar_cl03 has-feedback">  <input type=text class="wp_page_control form-control font_cl02" ng-model=mattersearchinput placeholder=Search> <i class="wp_search1 wp_page_control form-control-feedback"></i>  </div> <ul class=sidebar-nav> <li ng-repeat="datamatter in clientmastercopy | filter : mattersearchinput"> <div class=wp_sidebar_cl01> <a ng-click=getallInvoices(datamatter) class="wp_sidebar_cl02 wp_sidebar_cl04" ng-class="{'matterselectedstyle': datamatter.Kunnr == matternumber}"> <div class=row ng-if=datamatter.Kunnr>  <h4 class="font_cl03 col-xs-12">{{datamatter.Kunnr}}</h4> </div> <div class=row ng-if=datamatter.Name1>  <span class="font_cl05 col-xs-12">{{datamatter.Name1}}</span> </div> </a> </div> </li> </ul> </div> <div id=page-content-wrapper>  <div class="container-fluid wp_main_content"> <div class=col-xs-12> <div class="col-xs-5 col-md-5 dropdown" style="padding-left: 5px;"> </div> <div class="pull-right col-xs-7 col-md-7 wp_page_search" style="padding-right: 5px;">  <div class=wp_page_cl08>    </div> </div>  </div> <div class=row> <div class="tab-container clearfix"> <div class=col-xs-12>  <div data-ui-grid=gridData class=grid ui-grid-pinning ui-grid-edit ui-grid-auto-resize ui-grid-resize-columns ui-grid-move-columns ui-grid-selection resize-grid></div> </div> </div> </div>   </div> </div> </div> </div> </section> </div>   <footer class=main-footer> <div class="pull-right hidden-xs"> <div class=footer-button-container> <a class=footer-button ng-click=getallInvoices(datamatter) ng-show=!detailmode><i class="fa fa-refresh" aria-hidden=true></i>&nbsp;Refresh</a>  <a class=footer-button ng-click="Upload('UPL')"><i class="fa fa-floppy-o" aria-hidden=true></i>&nbsp;Save</a> <a class=footer-button ng-click="Upload('APR')"><i class="fa fa-check" aria-hidden=true></i>&nbsp;Approve</a> <span class=footer-button> <span class=fileinput-button><i class="fa fa-upload" aria-hidden=true></i>&nbsp;Upload <input type=file name=xlfile id=xlf value=Upload accept=application/vnd.openxmlformats-officedocument.spreadsheetml.sheet onchange=angular.element(this).scope().handleFile(this)> </span></span> </div> </div> </footer> 

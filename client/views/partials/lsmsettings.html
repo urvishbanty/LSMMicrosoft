@@ -1,0 +1,10 @@
+<style>
+    .modal-dialog {
+        width: 363px;
+        height: 550px;
+    }
+
+    .modal-content {
+        height: 100%;
+    }
+</style> <div class=modal-content style="box-shadow: 0px 0px 0px 0px; border: 0px; background-color: #F5F6F8; width: 363px; height: 100%;"> <div class="wp_modal_header modal-header"> <button type=button class=close ng-click=cancel()><span>&times;</span></button> <h3 class="modal-title font_cl09">View Settings</h3> </div> <div class=modal-body style="height: 85%;"> <div class="tbodyClass font_cl08" style="height: 100%;"> <div class=col-md-12> <div class=form-group> <ul class=font_cl08 style="margin-top: 10px; list-style-type: none;"> <li> <label> <md-checkbox ng-model=selectall class=chk_white ng-change=selectallitems()><span>Select All</span> </md-checkbox></label> </li> </ul> </div> </div> <div class=col-md-12> <div class=form-group> <ul class=font_cl08 style="margin-top: 10px; list-style-type: none;"> <li ng-repeat="item in lsmcolumns" ng-if="item.name!=''"> <label> <md-checkbox ng-model=item.isSelect class=chk_white><span>{{item.name}}</span> </md-checkbox></label> </li> </ul> </div> </div> </div> </div> <div class="wp_modal_footer modal-footer"> <button type=button class="btn btn-warning font_cl12 wp_modal_cl09" ng-click=setColumns()>Go</button> <span type class="font_cl12 wp_modal_cl09" ng-click=cancel()>Cancel</span> </div> </div> 

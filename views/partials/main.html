@@ -1,0 +1,512 @@
+        <style>
+    .tClass {
+        display: table;
+        border-collapse: collapse;
+        min-width: 900px;
+        background: white;
+    }
+
+    .theadClass {
+        display: table-header-group;
+        font-weight: bold;
+        background: #909EB8;
+        height: 40px;
+    }
+
+    .tdClass {
+        display: block;
+        padding: 8px;
+        float: left;
+        width: 11%;
+        word-wrap: break-word;
+    }
+
+    .thClass {
+        display: block;
+        padding: 8px;
+        float: left;
+        width: 11%;
+        word-wrap: break-word;
+    }
+
+    .tbodyClass {
+        /*display: table-row-group;*/
+        display: block;
+        height: 600px;
+        overflow-y: scroll;
+    }
+
+    .trClass {
+        display: table-row;
+    }
+    /*    .trClass span{
+            padding-left: 8px;
+        }*/
+    .topBorder {
+        border: 1px solid #D9DEE7;
+    }
+
+    .p {
+        padding: 8px;
+    }
+
+    .newRow {
+        background: #F5F6F8;
+        color: #43434D;
+        display: block;
+        float: left;
+        word-wrap: break-word;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .theadClass .thClass {
+        width: 10.86%;
+    }
+
+    .btn-footer {
+        background-color: #5987D3;
+        border-color: #5987D3;
+        border-radius: 3px !important;
+        width: 105px;
+        /*height: 34px;*/
+        height: 25px;
+        text-align: center !important;
+        padding: 1px;
+    }
+
+        .btn-footer:hover {
+            background-color: #F19C00 !important;
+            border-color: #F19C00 !important;
+            color: #FFFFFF;
+        }
+
+    .footeralignment {
+        padding-top: 8px;
+    }
+
+    .wp_select_cl01 select {
+        /*background: #ffffff!important;*/
+        border: 1px solid #E3E7EC;
+        min-width: 130px;
+        height: 27px;
+        /*margin: 10px 20px !important;*/
+        margin: 0px 0px 30px 0px !important;
+        background-color: #ffffff!important;
+        background: url("assets/images/dropdown_arrow.jpg") no-repeat center right;
+        -webkit-appearance: none; /*removes borders and downarrow button of the select box from webkit browsers.*/
+        -moz-appearance: none; /*cannot remove the downarrow button of the mozilla browsers.*/
+        appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+    }
+
+        .wp_select_cl01 select:focus {
+            outline: none;
+        }
+
+    .form-control {
+        border-radius: 0px!important;
+    }
+
+    .gridHead {
+        background: #909EB8;
+        color: white;
+        /*                word-wrap: break-word;
+                                font-family: arial;
+                                font-size: 14px;
+                                font-weight: lighter;
+                                padding: 3px;*/
+    }
+
+    .gridCell {
+        font-family: arial;
+        font-size: 13px;
+        font-weight: lighter;
+        padding: 3px;
+        word-wrap: break-word;
+    }
+
+    .gridCellBack {
+        background-color: white !important;
+    }
+
+    .ui-grid-cell-contents {
+        white-space: normal;
+    }
+
+    .ui-grid-cell-contents {
+        overflow: visible;
+    }
+
+    .ui-grid-cell {
+        overflow: visible;
+        border: none;
+        /*height: auto !important;*/
+    }
+
+    .ui-grid-header-cell {
+        border-right: none;
+        height: auto !important;
+    }
+
+    .mergedRow {
+        background-color: white !important;
+        color: #43434D;
+        border-bottom: 1px solid #D9DEE7;
+        padding: 8px;
+    }
+
+    .innerMerge {
+        background: #F5F6F8 !important;
+        border: 1px solid #D9DEE7;
+        padding: 5px;
+    }
+
+    .ui-grid-column-menu-button {
+        display: none;
+    }
+
+    .ui-grid-top-panel {
+        background: #909EB8;
+    }
+
+    md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+        background-color: rgb(242, 158, 0);
+    }
+
+    md-checkbox.md-checked .md-ink-ripple {
+        color: rgb(242, 158, 0);
+    }
+
+    md-toast {
+        z-index: 9999;
+    }
+
+    textarea {
+        resize: vertical; /* user can resize vertically, but width is fixed */
+    }
+
+    .ngViewport.ng-scope {
+        height: auto !important;
+        overflow-y: hidden;
+    }
+
+    .ngTopPanel.ng-scope, .ngHeaderContainer {
+        width: auto !important;
+    }
+
+    .matter-grid {
+        width: 100%;
+    }
+
+    .selectred {
+        border: 1px solid red;
+    }
+
+    .ui-grid-icon-up-dir {
+        /*content: '\c359';*/
+        background: url("/assets/images/wp_img_menu_up.png")no-repeat;
+    }
+
+    .ui-grid-icon-down-dir {
+        /*content: '\c358';*/
+        background: url("/assets/images/wp_img_menu_down.png")no-repeat;
+    }
+
+    .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+        background: rgb(242, 158, 0)!important;
+    }
+
+    .gridStyle {
+        border: 1px solid rgb(212,212,212);
+        width: 400px;
+        height: 400px;
+    }
+
+    .ngRow.odd {
+        background-color: transparent;
+    }
+
+    .ngRow.even {
+        background-color: transparent;
+    }
+
+    .ngGrid {
+        background-color: transparent;
+    }
+    /* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+    .fileinput-button {
+        position: relative;
+        overflow: hidden;
+    }
+        /*Also*/
+        .fileinput-button input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+            font-size: 200px;
+            direction: ltr;
+            cursor: pointer;
+        }
+
+    .grid {
+        height: 315px;
+    }
+
+    .grid2 {
+        height: 315px;
+    }
+
+    .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
+        border-right: none !important;
+    }
+
+    .popover {
+        margin-left: -313px;
+        max-width: 400px;
+        min-width: 200px;
+        max-height: 500px;
+        overflow: auto;
+        z-index: 9999;
+    }
+    .ui-grid-top-panel {
+    background: #fff;
+}
+  
+</style>
+<span us-spinner="{lines: 6
+, length: 10
+, width: 6
+, radius: 10
+, scale: 0.75
+, corners: 1
+, color: '#000'
+, opacity: 0.25
+, rotate: 0
+, direction: 1
+, speed: 1
+, trail: 60
+, fps: 20
+, zIndex: 2e9
+, className: 'spinner'
+, top: '50%'
+, left: '50%'
+, shadow: false
+, position: 'absolute'}"></span>
+
+<!--<span us-spinner="{lines:0
+, length: 0
+, width: 0
+, radius: 0
+, scale: 0
+, corners: 1
+, color: '#000'
+, opacity: 0.0
+, rotate: 0
+, direction: 1
+, speed: 1
+, trail: 60
+, fps: 20
+, zIndex: 2e9
+, className: 'spinner'
+, top: '50%'
+, left: '50%'
+, shadow: false
+, position: 'absolute', visible:false}"><div  class="spinner"></div></span>-->
+
+<div ng-header></div>
+
+
+<div class="content-wrapper" style="min-height: 244px;">
+    <script type="text/ng-template" id="gridfilter.html">
+           <span class="cross_delete pull-right"  ng-click="popoverclose()" style="margin-top: -34px;"></span>
+     <div ng-if='!detailmode'>
+            <div  ng-repeat="Filterslist in gridData.columnDefs track by $index" ng-if="Filterslist.HaveData && Filterslist.name!=''" >
+             <div class="row" >
+            <div ng-click="showhide(Filterslist.field,Filterslist.name)" >
+              <i class="indicator wp_menu_down  pull-left" ng-if="Filterslist.showhide"></i><i ng-if="!Filterslist.showhide" class="indicator wp_menu_right  pull-left"></i> <h4 class="wp_modal_cl03 font_cl10"><span ng-if="Filterslist.displayName">{{Filterslist.displayName}}</span><span ng-if="!Filterslist.displayName">{{Filterslist.name}}<span></h4>
+                </div>
+             <div class="col-md-6 col-xs-12" ng-if="Filterslist.showhide " ng-repeat="Filterele in Filterslist.FiltercolumnDef">
+              <input type="checkbox" ng-model="Filterele.IsSelect" ng-click="chekboxevent(Filterele.FilterValue,Filterele.filterId,Filterele)" >    
+              <label class="form-label font_cl11" ng-if="Filterele.filterId!='ZzinvoiceDate' && Filterele.filterId!='ZzbillingStartDate' && Filterele.filterId!='ZzbillingEndDate' && Filterele.filterId!='ZzrecvDate'">{{Filterele.FilterValue}}</label>
+              <!--<label class="form-label font_cl11" ng-if="(Filterele.filterId=='Posnr' || Filterele.filterId=='Pernr') && Filterele.FilterValue*1!=0">{{Filterele.FilterValue*1}}</label-->
+        
+              <label class="form-label font_cl11" ng-if="Filterele.filterId=='ZzinvoiceDate'||Filterele.filterId=='ZzbillingStartDate'||Filterele.filterId=='ZzbillingEndDate'||Filterele.filterId=='ZzrecvDate'">{{Filterele.FilterValue | dateFilter | date:'MM/dd/yyyy'}}</label>
+                         </div>
+             </div>
+             </div>
+             </div>
+      </div>
+     <div ng-if='detailmode'>
+         <div  ng-repeat="Filterslist in gridDetailsData.columnDefs track by $index" ng-if="Filterslist.HaveData && Filterslist.name!=''" >
+             <div class="row" >
+            <div ng-click="showhideinner(Filterslist.field,Filterslist.name)" >
+              <i class="indicator wp_menu_down  pull-left" ng-if="Filterslist.showhide"></i><i ng-if="!Filterslist.showhide" class="indicator wp_menu_right  pull-left"></i> <h4 class="wp_modal_cl03 font_cl10"><span ng-if="Filterslist.displayName">{{Filterslist.displayName}}</span><span ng-if="!Filterslist.displayName">{{Filterslist.name}}<span></h4>
+                </div>
+             <div class="col-md-6 col-xs-12" ng-if="Filterslist.showhide " ng-repeat="Filterele in Filterslist.FiltercolumnDef">
+              <input type="checkbox" ng-model="Filterele.IsSelect" ng-click="checkboxevent(Filterele.FilterValue,Filterele.filterId,Filterele)" >    
+              <label class="form-label font_cl11">{{Filterele.FilterValue}}</label>
+              <!--<label class="form-label font_cl11" ng-if="(Filterele.filterId=='Posnr' || Filterele.filterId=='Pernr') && Filterele.FilterValue*1!=0">{{Filterele.FilterValue*1}}</label>        
+              <label class="form-label font_cl11" ng-if="Filterele.filterId=='Budat'||Filterele.filterId=='Cpudt'||Filterele.filterId=='Bldat'">{{Filterele.FilterValue | dateFilter | date:'MM/dd/yyyy'}}</label>
+            -->
+             </div>
+             </div>
+             </div>
+             </div>
+     </div>
+    </script>
+    <section class="content  content-container">
+        
+        <div class="row content-navigation">
+
+            <a ng-class="{'selected': !paymode}" ng-hide="detailmode" ng-click="paymentmode('inv')">My Invoices</a>
+
+            <a ng-hide="detailmode" ng-class="{'selected': paymode}" ng-click="paymentmode('pay')">My Payments</a>
+            <a ng-show="detailmode" ng-click="detailmode = false;">Back</a>
+            <div class=" pull-right wp_page_cl08">
+
+                <i class="fa fa-cog settingsCls" aria-hidden="true" ng-click="showFormModal('settings')"></i>
+                <i class="fa fa-filter settingsCls" aria-hidden="true" data-toggle="popover" popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" popover-placement="bottom-left"></i>
+            </div>
+            &nbsp;&nbsp;           
+        </div>
+
+        <div class="row" ng-if='!detailmode'>
+            <div class="col-xs-12" ng-if="setVal">
+                <span ng-repeat="fil in filterCheckedArray">
+                    <span class="filter_item" ng-repeat="filname in fil.checkedarray">
+                        <span ng-if="fil.fieldname!='ZzinvoiceDate' && fil.fieldname!='ZzbillingStartDate' && fil.fieldname!='ZzbillingEndDate' && fil.fieldname!='ZzrecvDate'">{{filname}} </span>
+                        <!--<span ng-if="fil.fieldname=='Posnr'|| fil.fieldname=='Pernr'">{{filname*1}} </span>-->
+                        <span ng-if="fil.fieldname=='ZzinvoiceDate'||fil.fieldname=='ZzbillingStartDate'||fil.fieldname=='ZzbillingEndDate'||fil.fieldname=='ZzrecvDate'">{{filname | dateFilter | date:'MM/dd/yyyy'}} </span>
+                        <span class="icon-button fa fa-times theme-color-tertiary" ng-click="filterRemoveItem(filname,fil.fieldname)"></span>
+                        <!--  <span class="icon-button fa fa-times theme-color-tertiary" ng-click="filterRemoveItem(filname,fil.fieldname)"></span>-->
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="row" ng-if='detailmode'>
+            <div class="col-xs-12" ng-if="setValinner">
+                <span ng-repeat="fil in filterCheckedArrayinner">
+                    <span class="filter_item" ng-repeat="filname in fil.checkedarray">
+                        <span ng-if="fil.fieldname!='ZzinvoiceDate' && fil.fieldname!='ZzbillingStartDate' && fil.fieldname!='ZzbillingEndDate' && fil.fieldname!='ZzrecvDate'">{{filname}} </span>
+                        <!--<span ng-if="fil.fieldname=='Posnr'|| fil.fieldname=='Pernr'">{{filname*1}} </span>-->
+                        <span ng-if="fil.fieldname=='ZzinvoiceDate'||fil.fieldname=='ZzbillingStartDate'||fil.fieldname=='ZzbillingEndDate'||fil.fieldname=='ZzrecvDate'">{{filname | dateFilter | date:'MM/dd/yyyy'}} </span>
+                        <span class="icon-button fa fa-times theme-color-tertiary" ng-click="filterRemoveIteminner(filname,fil.fieldname)"></span>
+                        <!--  <span class="icon-button fa fa-times theme-color-tertiary" ng-click="filterRemoveItem(filname,fil.fieldname)"></span>-->
+                    </span>
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--     <h1 ng-hide="detailmode">{{header}}</h1>-->
+            <h1 ng-show="detailmode">{{headerline}}</h1>
+            <div id="exTab1" class="tab-container">
+                <ul class="nav nav-pills" id="myTab" style="cursor: pointer" ng-hide="detailmode">
+                    <!--                    <li class="active pending" class="active" ng-show="!paymode"><a data-target="#home" data-toggle="tab" ng-click="filtergrid('pending')"><i class="fa fa-clock-o"></i><span>Pending({{pendingcount}})</span></a></li>
+                    <li class="approved" ng-show="!paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('approved')"><i class="fa fa-clock-o"></i><span>Approved({{approvedcount}})</span></a></li>
+                    <li class="rejected" ng-show="!paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('rejected')"><i class="fa fa-close"></i><span>Rejected({{rejectedcount}})</span></a></li>
+                    <li class="holdbudget" ng-show="!paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('hold')"><span>Hold 'Budget'({{holdcount}})</span></a></li>
+                    <li class="inreview" ng-show="!paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('review')"><span>In Review({{reviewcount}})</span></a></li>
+
+                    <li class="active paid" class="active" ng-show="paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('paid')"><span>Paid({{paidcount}})</span></a></li>
+                    <li class="processed" ng-show="paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('processed')"><span>Processed({{processedcount}})</span></a></li>
+                    <li class="pendingpayment" ng-show="paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('apppayment')"><span>Approved Pending Payment ({{apppaymentount}})</span></a></li>
+                    <li class="failed" ng-show="paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('failed')"><span>Failed({{failedcount}})</span></a></li>
+-->
+                    <li class=" pending" ng-show="!paymode" style="width: 20%; display: block; float: left;"><a data-target="#home" data-toggle="tab" ng-click="filtergrid('pending')"><i class="fa fa-pause"></i><span>Pending </span>
+                        <p class="tile-data">{{pendingcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color1" ng-show="filtergridtype =='pending'"></i></li>
+                    <li style="width: 20%; display: block; float: left;" class="inreview" ng-show="!paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('review')"><i class="fa fa-star-half-o"></i><span>In Process </span>
+                        <p class="tile-data">{{reviewcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color5" ng-show="filtergridtype =='review'"></i></li>
+
+                    <li style="width: 20%; display: block; float: left;" class="approved" ng-show="!paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('approved')"><i class="fa fa-check"></i><span>Approved </span>
+                        <p class="tile-data">{{approvedcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color2" ng-show="filtergridtype =='approved'"></i></li>
+                    <li style="width: 20%; display: block; float: left;" class="rejected" ng-show="!paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('rejected')"><i class="fa fa-ban"></i><span>Rejected </span>
+                        <p class="tile-data">{{rejectedcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color3" ng-show="filtergridtype =='rejected'"></i></li>
+                    <li style="width: 20%; display: block; float: left;" class="holdbudget" ng-show="!paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('hold')"><i class="fa fa-hourglass-half"></i><span>Hold Budget </span>
+                        <p class="tile-data">{{holdcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color4" ng-show="filtergridtype =='hold'"></i></li>
+
+                    <li style="width: 25%; display: block; float: left;" class=" paid" ng-show="paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('paid')"><i class="fa fa-credit-card"></i><span>Paid </span>
+                        <p class="tile-data">{{paidcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color2" ng-show="filtergridtype =='paid'"></i></li>
+                    <li style="width: 25%; display: block; float: left;" class="processed" ng-show="paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('processed')"><i class="fa fa-hourglass"></i><span>Processed </span>
+                        <p class="tile-data">{{processedcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color5" ng-show="filtergridtype =='processed'"></i></li>
+                    <li style="width: 25%; display: block; float: left;" class="pendingpayment" ng-show="paymode"><a data-target="#profile" data-toggle="tab" ng-click="filtergrid('apppayment')"><i class="fa fa-thumbs-up"></i><span>Approved Pending Payment </span>
+                        <p class="tile-data">{{apppaymentount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color1" ng-show="filtergridtype =='apppayment'"></i></li>
+                    <li style="width: 25%; display: block; float: left;" class="failed" ng-show="paymode"><a data-target="#messages" data-toggle="tab" ng-click="filtergrid('failed')"><i class="fa fa-ban"></i><span>Failed </span>
+                        <p class="tile-data">{{failedcount}}</p>
+                    </a><i class="fa fa-caret-down downarrow da-color3" ng-show="filtergridtype =='failed'"></i></li>
+
+                </ul>
+
+                <div class="tab-content clearfix">
+                    <div class="col-xs-12" ng-hide="detailmode">
+                        <!--  ng-style="{'height' : gridHeight }" -->
+                        <div data-ui-grid="gridData" ui-grid-auto-resize ui-grid-resize-columns ui-grid-move-columns ui-grid-selection ui-grid-pinning resize-grid class="grid"></div>
+
+                    </div>
+                    <div class="col-xs-12" ng-show="detailmode">
+                        <div data-ui-grid="gridDetailsData" class="grid2" ui-grid-auto-resize ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning resize-grid></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+</div>
+
+<!--</div>-->
+<footer class="main-footer">
+
+    <div class="pull-right hidden-xs">
+        <!--        <div class="footer-button-container">
+            <a class="footer-button" ng-click="getallInvoices()" ng-show="!detailmode">Refresh</a>
+            <a class="footer-button" ng-show="filtergridtype=='review' && !detailmode" ng-click="createinvoice()">Approve </a>
+
+            <a class="footer-button" ng-show="filtergridtype=='review' && !detailmode" ng-click="showFormModal('reject')">Reject  </a>
+            <a class="footer-button" ng-show="(filtergridtype=='pending' || filtergridtype=='hold') && !detailmode" ng-click="acceptpending('04')">Accept</a>
+            <a class="footer-button" ng-show="(filtergridtype=='pending' || filtergridtype=='hold') && !detailmode" ng-click="showFormModal('reject')">Reject</a>
+
+            <span class="footer-button" ng-show="!detailmode">
+                <span class="fileinput-button" for="xlfile">Upload Attachments
+                                <input type="file" name="xlfile" id="xlfAttach" value="UploadAttachment" onchange="angular.element(this).scope().handleAttachFile(this)">
+                </span>
+            </span>
+        </div>-->
+        <div class="footer-button-container">
+            <a class="footer-button" ng-click="getallInvoices()" ng-show="!detailmode"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;Refresh</a>
+            <a class="footer-button" ng-show="filtergridtype=='review' && !detailmode" ng-click="createinvoice()"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Approve </a>
+
+            <span class="footer-redbutton"><a ng-show="filtergridtype=='review' && !detailmode" ng-click="showFormModal('reject')"><i class="fa fa-ban" aria-hidden="true"></i>&nbsp;Reject  </a></span>
+            <a class="footer-button" ng-show="(filtergridtype=='pending' || filtergridtype=='hold') && !detailmode" ng-click="acceptpending('04')"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Accept</a>
+            <span class="footer-redbutton"><a ng-show="(filtergridtype=='pending' || filtergridtype=='hold') && !detailmode" ng-click="showFormModal('reject')"><i class="fa fa-ban" aria-hidden="true"></i>&nbsp;Reject</a></span>
+
+            <span class="footer-button" ng-show="!detailmode">
+                <span class="fileinput-button" for="xlfile"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload Attachment(s)
+                                <input type="file" name="xlfile" id="xlfAttach" value="UploadAttachment" onchange="angular.element(this).scope().handleAttachFile(this)">
+                </span>
+            </span>
+
+        </div>
+    </div>
+
+
+
+</footer>
+

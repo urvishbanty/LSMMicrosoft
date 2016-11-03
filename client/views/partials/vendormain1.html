@@ -1,0 +1,259 @@
+<style>
+    .tClass {
+        display: table;
+        border-collapse: collapse;
+        min-width: 900px;
+        background: white;
+    }
+
+    .theadClass {
+        display: table-header-group;
+        font-weight: bold;
+        background: #909EB8;
+        height: 40px;
+    }
+
+    .tdClass {
+        display: block;
+        padding: 8px;
+        float: left;
+        width: 11%;
+        word-wrap: break-word;
+    }
+
+    .thClass {
+        display: block;
+        padding: 8px;
+        float: left;
+        width: 11%;
+        word-wrap: break-word;
+    }
+
+    .tbodyClass {
+        /*display: table-row-group;*/
+        display: block;
+        height: 600px;
+        overflow-y: scroll;
+    }
+
+    .trClass {
+        display: table-row;
+    }
+    /*    .trClass span{
+            padding-left: 8px;
+        }*/
+    .topBorder {
+        border: 1px solid #D9DEE7;
+    }
+
+    .p {
+        padding: 8px;
+    }
+
+    .newRow {
+        background: #F5F6F8;
+        color: #43434D;
+        display: block;
+        float: left;
+        word-wrap: break-word;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .theadClass .thClass {
+        width: 10.86%;
+    }
+
+    .btn-footer {
+        background-color: #5987D3;
+        border-color: #5987D3;
+        border-radius: 3px !important;
+        width: 105px;
+        /*height: 34px;*/
+        height: 25px;
+        text-align: center !important;
+        padding: 1px;
+    }
+
+        .btn-footer:hover {
+            background-color: #F19C00 !important;
+            border-color: #F19C00 !important;
+            color: #FFFFFF;
+        }
+
+    .footeralignment {
+        padding-top: 8px;
+    }
+
+    .wp_select_cl01 select {
+        /*background: #ffffff!important;*/
+        border: 1px solid #E3E7EC;
+        min-width: 130px;
+        height: 27px;
+        /*margin: 10px 20px !important;*/
+        margin: 0px 0px 30px 0px !important;
+        background-color: #ffffff!important;
+        background: url("assets/images/dropdown_arrow.jpg") no-repeat center right;
+        -webkit-appearance: none; /*removes borders and downarrow button of the select box from webkit browsers.*/
+        -moz-appearance: none; /*cannot remove the downarrow button of the mozilla browsers.*/
+        appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+    }
+
+        .wp_select_cl01 select:focus {
+            outline: none;
+        }
+
+    .form-control {
+        border-radius: 0px!important;
+    }
+
+    .gridHead {
+        background: #909EB8;
+        color: white;
+        /*                word-wrap: break-word;
+                                font-family: arial;
+                                font-size: 14px;
+                                font-weight: lighter;
+                                padding: 3px;*/
+    }
+
+    .gridCell {
+        font-family: arial;
+        font-size: 13px;
+        font-weight: lighter;
+        padding: 3px;
+        word-wrap: break-word;
+    }
+
+    .gridCellBack {
+        background-color: white !important;
+    }
+
+    .ui-grid-cell-contents {
+        white-space: normal;
+    }
+
+    .ui-grid-cell-contents {
+        overflow: visible;
+    }
+
+    .ui-grid-cell {
+        overflow: visible;
+        border: none;
+        /*height: auto !important;*/
+    }
+
+    .ui-grid-header-cell {
+        border-right: none;
+        height: auto !important;
+    }
+
+    .mergedRow {
+        background-color: white !important;
+        color: #43434D;
+        border-bottom: 1px solid #D9DEE7;
+        padding: 8px;
+    }
+
+    .innerMerge {
+        background: #F5F6F8 !important;
+        border: 1px solid #D9DEE7;
+        padding: 5px;
+    }
+
+    .ui-grid-column-menu-button {
+        display: none;
+    }
+
+    .ui-grid-top-panel {
+        background: #909EB8;
+    }
+
+    md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+        background-color: rgb(242, 158, 0);
+    }
+
+    md-checkbox.md-checked .md-ink-ripple {
+        color: rgb(242, 158, 0);
+    }
+
+    md-toast {
+        z-index: 9999;
+    }
+
+    textarea {
+        resize: vertical; /* user can resize vertically, but width is fixed */
+    }
+
+    .ngViewport.ng-scope {
+        height: auto !important;
+        overflow-y: hidden;
+    }
+
+    .ngTopPanel.ng-scope, .ngHeaderContainer {
+        width: auto !important;
+    }
+
+    .matter-grid {
+        width: 100%;
+    }
+
+    .selectred {
+        border: 1px solid red;
+    }
+
+    .ui-grid-icon-up-dir {
+        /*content: '\c359';*/
+        background: url("/assets/images/wp_img_menu_up.png")no-repeat;
+    }
+
+    .ui-grid-icon-down-dir {
+        /*content: '\c358';*/
+        background: url("/assets/images/wp_img_menu_down.png")no-repeat;
+    }
+
+    .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+        background: rgb(242, 158, 0)!important;
+    }
+
+    .gridStyle {
+        border: 1px solid rgb(212,212,212);
+        width: 400px;
+        height: 400px;
+    }
+
+    .ngRow.odd {
+        background-color: transparent;
+    }
+
+    .ngRow.even {
+        background-color: transparent;
+    }
+
+    .ngGrid {
+        background-color: transparent;
+    }
+    /* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+    .fileinput-button {
+        position: relative;
+        overflow: hidden;
+    }
+        /*Also*/
+        .fileinput-button input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+            font-size: 200px;
+            direction: ltr;
+            cursor: pointer;
+        }
+
+    .grid {
+        height: 400px;
+    }
+</style>  <div class=modal-content style="box-shadow: 0px 0px 0px 0px; border: 0px; background-color: #F5F6F8;"> <div class="wp_modal_header modal-header">  <button type=button class=close ng-click=cancel()><span>&times;</span></button> <h3 class="modal-title font_cl09">Adjust TK Rate</h3>  </div> <div class=modal-body> <div class=page-container style="/*position: fixed !important; */width: 100%; /*padding-right: 80px; */ height: 100%; padding-bottom: 5px; box-sizing: border-box;">  <div id=wrapper ng-class="{'toggled': issideActive}"> <div id=sidebar-wrapper> <div class="wp_page_form form-group wp_sidebar_cl03 has-feedback"> <input type=text class="wp_page_control form-control font_cl02" ng-model=mattersearchinput placeholder=Search> <i class="wp_search1 wp_page_control form-control-feedback"></i>  </div> <ul class=sidebar-nav> <li ng-repeat="datamatter in clientmastercopy | filter : mattersearchinput"> <div class=wp_sidebar_cl01> <a ng-click=getallInvoices(datamatter) class="wp_sidebar_cl02 wp_sidebar_cl04"> <div class=row ng-if=datamatter.Kunnr> <h4 class="font_cl03 col-xs-6">Vendor:</h4> <h4 class="font_cl03 col-xs-6">{{datamatter.Kunnr}}</h4> </div> <div class=row ng-if=datamatter.Name1> <span class="font_cl05 col-xs-6">Client Name:</span> <span class="font_cl05 col-xs-6">{{datamatter.Name1}}</span> </div> </a> </div> </li> </ul> </div> <div id=page-content-wrapper> <div style="height: 5px"></div> <div class="container-fluid wp_main_content"> <div class=col-xs-12> <div class="col-xs-5 col-md-5 dropdown" style="padding-left: 5px;"> </div> <div class="pull-right col-xs-7 col-md-7 wp_page_search" style="padding-right: 5px;"> <div class="wp_page_form form-group has-feedback"> <input type=text class="wp_page_control form-control font_cl02 searchInput" placeholder=Search ng-model=matterdetailsearchinput ng-change=filterdata()> <i class="wp_search2 wp_page_control form-control-feedback"></i>  </div> <div class=wp_page_cl08>    </div> </div>  </div> <div class=row> <div class=col-xs-12>  <div data-ui-grid=gridData class=grid ui-grid-auto-resize ui-grid-resize-columns ui-grid-move-columns ui-grid-selection></div> </div> </div> <div style="height: 10px"></div>  </div> </div> </div>    </div>  </div> <div class="wp_modal_footer modal-footer"> <span type class="font_cl12 wp_modal_cl09" ng-click=cancel()>Cancel</span> </div> </div> 

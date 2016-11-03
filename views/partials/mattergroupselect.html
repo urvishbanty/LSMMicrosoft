@@ -1,0 +1,38 @@
+﻿<div class="modal-content modal-content-flat">
+
+ <div class="wp_modal_header modal-header">
+        <button type="button" class="close" ng-click="cancel()"><span>&times;</span></button>
+        <h3 class="modal-title theme-color-primarydark font_cl09">Please Select</h3>
+    </div>
+
+    <!-- <div class="modal-header theme-background-secondary">
+        <button type="button" class="close" ng-click="cancel()"><span>&times;</span></button>
+        <h3 class="modal-title theme-color-primarydark font_cl09">Please Select</h3>
+    </div> -->
+	
+    <div class="modal-body">
+		<div class="row">
+			<div ng-repeat="detail in matterDetaildata">				
+                <div class="col-md-4 col-xs-6" ng-if="detail.Waers">
+					<md-button class="md-raised" ng-click="selecteditem(detail.Waers)">{{detail.Waers+'-'+detail.Ltext}}</md-button>
+				</div>
+                  <div class="col-md-12 col-xs-12" ng-if="detail.Werks">
+                    <md-button class="md-raised" ng-click="selecteditem(detail.Werks)">{{detail.Werks}} - {{detail.Name1}}</md-button>
+                </div>
+                <div class="col-md-12 col-xs-12" ng-if="detail.Pspid">
+                    <md-button class="md-raised" ng-click="selecteditem(detail.Pspid)">{{detail.Pspid}} - {{detail.Post1}}</md-button>
+                </div>
+                <div class="col-md-12 col-xs-12" ng-if="detail.Parnr">
+                    <md-button class="md-raised" ng-click="selecteditem(detail.Parnr)">{{detail.Parnr}} - {{detail.Name1}}</md-button>
+                </div>
+			</div>
+		</div>
+    </div>
+	
+</div>
+
+
+
+
+
+
