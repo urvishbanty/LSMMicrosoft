@@ -3,10 +3,7 @@
 
 <div class="content-wrapper" style="min-height: 244px;">
     <section class="content  content-container">
-        <!-- <h1>Header</h1> -->
-
-
-    <div class="row content-navigation">
+        <div class="row content-navigation">
         <a ng-class="{'selected': !paymode}" ng-hide="detailmode" ng-click="paymentmode('inv')">My Invoices</a>
         <a ng-hide="detailmode" ng-class="{'selected': paymode}" ng-click="paymentmode('pay')">My Payments</a>
         <!-- <a ng-show="detailmode" ng-click="detailmode = false;">Back</a> -->
@@ -18,8 +15,7 @@
     </div>
 
       <div class="row">
-       <nvd3 options="options" data="data"></nvd3>
-            <!--     <h1 ng-hide="detailmode">{{header}}</h1>-->
+        <!--     <h1 ng-hide="detailmode">{{header}}</h1>-->
             <h1 ng-show="detailmode">{{headerline}}</h1>
             <div id="exTab1" class="tab-container">
                 <ul class="nav nav-pills" id="myTab" style="cursor: pointer" ng-hide="detailmode">
@@ -75,8 +71,7 @@
                 <div class="panel panel-default panel-style">
                     <div class="panel-heading head-style">Total Legal Spend</div>
                     <div class="panel-body">
-                       <!--  <canvas id="bar" class="chart chart-bar bar-style" chart-data="spenddata" chart-labels="spendlabels" width="450" height="300"></canvas> -->
-                         <canvas id="bar" class="chart chart-bar bar-style" chart-data="spenddata" chart-colors="spendcolors" chart-options="spendoptions"  chart-labels="spendlabels" width="450" height="300">
+                        <canvas id="bar" class="chart chart-bar bar-style"chart-data="data" chart-labels="labels" chart-series="series" width="450" height="300"></canvas>
                     </div>
                 </div>
             </div>
@@ -84,16 +79,12 @@
                 <div class="panel panel-default panel-style">
                     <div class="panel-heading head-style">Actual vs. Budgeted Costs</div>
                     <div class="panel-body">
-                    
-<!--                         <div style="margin-top : -10px;"><div class="blue"></div> 
+                        <div style="margin-top : -10px;"><div class="first"></div> 
                            <div class="data1">Remaining Budget</div>
-                           <div class="green"></div> 
-                             <div class="data1">Actual Budget</div></div> -->
-                     <!--    <canvas id="base" class="chart chart-horizontal-bar bar-style" chart-data="Actualdata" chart-colors="Actualcolors" chart-options="Actualoptions" chart-legend="true" chart-labels="Actuallabel" width="450" height="300"
-                        ></canvas> -->
-                        <canvas id="base" class="chart chart-horizontal-bar bar-style" chart-data="Actualdata" chart-colors="Actualcolors" chart-options="Actualoptions" chart-series="Actualseries" chart-dataset-override="datasetOverride1" chart-legend="true" chart-labels="Actuallabel" width="450" height="300"></canvas> 
-                    <!--  <canvas class="chart chart-bar bar-style" chart-data="data" chart-labels="labels" chart-colors="colors" 
-                  chart-options="options" chart-series="series" width="450" height="300"></canvas> -->
+                           <div class="second"></div> 
+                           <div class="data1">Actual Budget</div></div> 
+                        <canvas id="base" class="chart-horizontal-bar bar-style" chart-data="datahorizontal" chart-labels="lablehorizantal" width="450" height="300"
+                        ></canvas>
                         
                     </div>
                 </div>
@@ -106,8 +97,7 @@
                 <div class="panel panel-default panel-style">
                         <div class="panel-heading head-style">Spend by Vendor</div>
                         <div class="panel-body">
-                           <!--  <canvas id="Canvas3" class="chart-horizontal-bar bar-style" chart-data="vendordata" chart-labels="vendorlabel"  width="450" height="300"></canvas> -->
-                            <canvas id="Canvas3" class="chart chart-bar bar-style" chart-options="vendoroptions" chart-data="vendordata" chart-labels="vendorlabel" chart-colors="vendorcolors"  width="450" height="300"></canvas>
+                            <canvas id="Canvas3" class="chart-horizontal-bar bar-style"chart-data="datahor" chart-labels="labelshor" chart-series="series" width="450" height="300"></canvas>
                             
                         </div>
                     </div>
@@ -117,18 +107,28 @@
                     <div class="panel panel-default panel-style">
                         <div class="panel-heading head-style">Spend By Matter Type</div>
                            <div class="panel-body">
-                           <!--   <div style="margin-top : -10px;">
-                                <div class="blue"></div>
-                            <div class="data1">{{Matterlabels[0]}} :{{Matterdata[0]}}</div>
-                           <div class="green"></div> 
-                           <div class="data1">{{Matterlabels[1]}} : {{Matterdata[1]}}</div>
-                            <div class="blue" ng-if="Matterlabels[2].length>1"></div>
-                            <div class="data1" ng-if="Matterlabels[2].length>1">{{Matterlabels[2]}} : {{Matterdata[2]}}</div>
-                           <div class="green" ng-if="Matterlabels[3].length>1"></div> 
-                           <div class="data1" ng-if="Matterlabels[3].length>1">{{Matterlabels[3]}} : {{Matterdata[3]}}</div>
-                            <div class="green" ng-if="Matterlabels[4].length>1"></div> 
-                           <div class="data1" ng-if="Matterlabels[4].length>1">{{Matterlabels[4]}} : {{Matterdata[4]}}</div></div> -->                           
-                            <canvas id="Canvas1" class="chart chart-pie bar-style" chart-data="Matterdata" chart-labels="Matterlabels" chart-series="series" chart-options="Matteroptions" width="450" height="300" chart-legend="true" chart-display = "true"></canvas>
+                             <div style="margin-top : -17px;">
+                                <!-- <div class="first"></div>
+                            <div class="data1">{{labelspie[0]}} :
+                           {{datapie[0]}}</div>
+                           <div class="second"></div> 
+                           <div class="data1">{{labelspie[1]}} :
+                            {{datapie[1]}}</div>
+                            <div class="third" ng-if="labelspie[2].length>1"></div>
+                            <div class="data1" ng-if="labelspie[2].length>1">{{labelspie[2]}} :
+                           {{datapie[2]}}</div>
+                           <div class="fourth" ng-if="labelspie[3].length>1"></div> 
+                           <div class="data1" ng-if="labelspie[3].length>1">{{labelspie[3]}} :
+                            {{datapie[3]}}</div>
+                        <div class="fifth" ng-if="labelspie[4].length>1"></div> 
+                           <div class="data1" ng-if="labelspie[4].length>1">{{labelspie[4]}} :
+                            {{datapie[4]}}</div> -->
+                            <table ng-repeat="data in collection" style="display:inline-block;">
+                                <tr><td>
+                                    <div style="background-color:{{data.color}};width:10px;height:10px;"></div></td> 
+                                    <td style="display:inline-block; margin: 0 4px 0 4px;">{{data.name}} : {{data.sal}}</td></tr>
+                            </table></div>                           
+                            <canvas id="Canvas1" class="chart chart-pie bar-style" chart-data="datapie" chart-labels="labelspie" chart-series="series" width="450" height="300" chart-legend="true" chart-display = "true"></canvas>
                          </div>
 
                     </div>
@@ -147,6 +147,5 @@
                     
                 </div> -->
          </div>
-         
-                    </section>
+        </section>
     </div>
